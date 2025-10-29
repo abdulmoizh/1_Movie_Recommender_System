@@ -4,7 +4,7 @@ import pickle
 import requests
 
 def fetch_poster(movie_id):
-    response = requests.get('https://api.themoviedb.org/3/movie/{}?api_key=79debb0f5cf44084dc72bfb673b061f8&language-en-US'.format(movie_id), verify=False)
+    response = requests.get('https://api.themoviedb.org/3/movie/{}?api_key=*******&language-en-US'.format(movie_id), verify=False)
     data = response.json()
     # st.text(data)
     # st.text('https://api.themoviedb.org/3/movie/{}?api_key=79debb0f5cf44084dc72bfb673b061f8&&language=en-US'.format(movie_id))
@@ -56,4 +56,5 @@ if st.button('Show Recommendation'):
         st.image(recommended_movie_posters[3])
     with col5:
         st.text(recommended_movie_names[4])
+
         st.image(recommended_movie_posters[4])
